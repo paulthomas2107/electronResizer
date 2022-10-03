@@ -9,6 +9,11 @@ function createMainWindow() {
     title: 'Image Reszier',
     width: isDev ? 1200 : 500,
     height: 600,
+    webPreferences: {
+      contextIsolation: true,
+      nodeIntegration: true,
+      preload: path.join(__dirname, 'preload.js'),
+    },
   });
 
   // Open dev tools if in dev

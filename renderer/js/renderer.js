@@ -11,7 +11,18 @@ function loadImage(e) {
     console.log('Please select an image.');
     return;
   }
-  console.log('Success....');
+
+  // Get original dimensions
+  const image = new Image();
+  image.src = URL.createObjectURL(file);
+  image.onload = function () {
+    widthInput.value = this.width;
+    heightInput.value = this.height;
+  };
+
+  form.style.display = 'block';
+  filename.innerText = file.name;
+  outputPath.innerText = path.join(os.homedir(), 'imageresizer');
 }
 
 // Check file is image
