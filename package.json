@@ -5,7 +5,7 @@
   "description": "App to resize image",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron ."
   },
   "author": "Paul T",
   "license": "ISC",
