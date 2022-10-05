@@ -4,6 +4,8 @@ const os = require('os');
 const fs = require('fs');
 const resizeImg = require('resize-img');
 const isMac = process.platform === 'darwin';
+// Allow console if in dev
+process.env.NODE_ENV = 'production';
 const isDev = process.env.NODE_ENV !== 'production';
 
 let mainWindow;
